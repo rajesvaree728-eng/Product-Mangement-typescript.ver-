@@ -1,0 +1,22 @@
+{
+  "name": "reusable-data-management",
+  "version": "1.0.0",
+  "type": "module",
+  "dependencies": {
+    "ts-node": "^10.9.2"
+  },
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+        "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "types": "./index.d.ts",
+  "devDependencies": {
+    "typescript": "^7.0.2",
+    "vite": "^8.3.8"
+  }
+}

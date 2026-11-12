@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Product Management System</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>Product Management</h1>
+            <p>Manage your products efficiently.</p>
+        </header>
+
+
+        <!-- ADD PRODUCT FORM -->
+
+        <section class="add-section">
+
+            <h2>Add New Product</h2>
+
+            <form id="productForm">
+
+                <input
+                    type="text"
+                    id="productName"
+                    placeholder="Product name"
+                    required
+                >
+
+                <input
+                    type="number"
+                    id="productPrice"
+                    placeholder="Product price"
+                    min="0.01"
+                    step="0.01"
+                    required
+                >
+
+                <button type="submit">
+                    Add Product
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- SEARCH AND SORT -->
+
+        <section class="toolbar">
+
+            <input
+                type="search"
+                id="searchInput"
+                placeholder="Search products..."
+            >
+
+            <select id="sortSelect">
+
+                <option value="name-asc">Name: A to Z</option>
+
+                <option value="name-desc">Name: Z to A</option>
+
+                <option value="price-asc">Price: Low to High</option>
+
+                <option value="price-desc">Price: High to Low</option>
+
+            </select>
+
+        </section>
+
+
+        <!-- PRODUCT TABLE -->
+
+        <section class="table-section">
+
+            <div class="table-heading">
+
+                <h2>All Products</h2>
+
+                <span id="productCount">
+                    0 products found
+                </span>
+
+            </div>
+
+            <div class="table-wrapper">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+                            <th>ID</th>
+                            <th>Product Name</th>
+                            <th>Price</th>
+                            <th>Action</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="productTable">
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- PAGINATION -->
+
+        <section class="pagination">
+
+            <button id="prevButton">
+                Previous
+            </button>
+
+            <span id="pageInfo">
+                Page 1 of 1
+            </span>
+
+            <button id="nextButton">
+                Next
+            </button>
+
+        </section>
+
+    </div>
+
+    <script type="module" src="main.ts"></script>
+
+</body>
+
+</html>
